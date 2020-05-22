@@ -1,0 +1,126 @@
+div.defaultCell {
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    /* background-color: aqua; */
+    /* border: solid black 2px; */
+}
+
+.defaultCell {
+    background-color: white;
+}
+
+.startCell {
+    background-image: url('chevron-right.svg');
+    z-index: 5;
+}
+
+*, *::after, *::before {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
+    cursor: default;
+}
+
+
+.wallCell {
+    background-color: rgb(12, 53, 71);
+    animation-name: wallAnimation;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+}
+
+@keyframes wallAnimation {
+    0% {
+        transform: scale(.3);
+        background-color: rgb(12, 53, 71);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.1);
+        background-color: rgb(12, 53, 71);
+    }
+}
+
+.targetCell {
+    /* background-color: red; */
+    background-image: url('target.svg');
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle cx='50' cy='50' r='40' stroke='green' stroke-width='4' fill='yellow' /%3E%3C/svg%3E"); */
+}
+
+/* .discoveredCell {
+    background-color: yellow;
+} */
+
+.shortestPath {
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    animation: pulse 2s;
+    z-index: 1;
+}
+  
+@keyframes pulse {
+    0% {
+      background-color: whitesmoke;
+    }
+    100% {
+      background-color: yellow;
+    }
+}
+
+.shortestPathNoAnimate {
+    background-color: yellow;
+}
+
+.discoveredCellNoAnimate {
+    background-color: rgba(0, 190, 218, 0.75);
+}
+
+.discoveredCell {
+    /* height: 250px;
+    width: 250px; */
+    margin: 0 auto;
+    background-color: rgba(0, 190, 218, 0.75);
+    animation-name: stretch;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    /* animation-iteration-count: infinite; */
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  
+  @keyframes stretch {
+    0% {
+      transform: scale(.3);
+      background-color: rgba(0, 190, 218, 0.75);
+      border-radius: 100%;
+    }
+    50% {
+      background-color: orange;
+    }
+    /* 100% {
+      transform: scale(1.5);
+      background-color: yellow;
+    } */
+}
+
+td.cell {
+    width: 2.5vh;
+    height: 2.5vh;
+    border: solid rgb(175, 216, 248) 1px;
+    padding: 0;
+}
+
+.grid {
+    border-spacing: 0;
+    border-collapse: collapse;
+}

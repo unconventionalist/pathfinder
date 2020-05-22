@@ -1,0 +1,35 @@
+@import "~bootstrap/scss/bootstrap";
+
+.bg-dark-navy {
+    background-color: rgb(10, 44, 61);
+}
+
+.navbar-text {
+    color: white !important;
+}
+
+.navbar-text-red {
+    color: #ff0080 !important;
+}
+
+a.navbar-text:hover {
+    color:yellow !important;
+}
+
+a.navbar-text-red:hover{
+    color: #00ffff !important;
+}
+
+.dropdown-item:hover{
+    background-color: rgb(10, 44, 61);
+}
+
+.dropdown-menu { 
+    background-color: rgb(10, 44, 61); 
+}
+
+//.dropdown-menu{background:rgba(0,0,0,0.5); color:white; }
+
+#basic-nav-dropdown{
+    color:white !important; 
+}
